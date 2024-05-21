@@ -28,11 +28,13 @@ h1 {
 .jogador1 {
     background-color: #f96153;
     color: #fff;
+    text-align: center;
 }
 
 .jogador2 {
     background-color: #75a6ea;
     color: #fff;
+    text-align: center;
 }
 
 #mensagem {
@@ -62,10 +64,19 @@ h1 {
     border:  1px solid #bf9f88;
 }
 
-#reiniciar{
-    margin-top: 20px;
-    background-color: #d5d9dd;
-    color: #928787;
+#reiniciar {
     padding: 10px 20px;
+    background-color: #c6c8ca;
+    color: #fff;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    appearance: none; /* Remove a aparência padrão do botão */
+    outline: none; /* Remove a borda de foco do botão */
+}
+
+#reiniciar:hover {
+    background-color: #aaabac;
 }
