@@ -23,18 +23,22 @@ h1 {
     padding: 10px 20px;
     border-radius: 5px;
     margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 120px;
+    height: 40px;
 }
 
 .jogador1 {
     background-color: #f96153;
     color: #fff;
-    text-align: center;
 }
 
 .jogador2 {
     background-color: #75a6ea;
     color: #fff;
-    text-align: center;
 }
 
 #mensagem {
@@ -61,12 +65,21 @@ h1 {
 .casa {
     width: 100px;
     height: 100px;
-    border:  1px solid #bf9f88;
+    border: 1px solid #bf9f88;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.casa:hover {
+    background-color: #f6a68d;
 }
 
 #reiniciar {
     padding: 10px 20px;
-    background-color: #c6c8ca;
+    background-color: #75a6ea;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -78,5 +91,5 @@ h1 {
 }
 
 #reiniciar:hover {
-    background-color: #aaabac;
+    background-color: #4a82c9;
 }
