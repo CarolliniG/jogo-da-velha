@@ -1,4 +1,8 @@
 const casas = document.querySelectorAll('.casa');
+const legendaJogador1 = document.querySelector('.jogador1');
+const legendaJogador2 = document.querySelector('.jogador2');
+const botaoReiniciar = document.getElementById('reiniciar');
+
 let jogadorAtual = 1; // 1: Jogador 1, 2: Jogador 2
 let jogoEmAndamento = true;
 let vencedor = null;
@@ -7,8 +11,8 @@ casas.forEach(casa => {
     casa.addEventListener('click', () => {
         if (jogoEmAndamento && !casa.textContent) {
             marcarCasa(casa, jogadorAtual);
-            verificarVencedor();
             trocarJogador();
+            verificarVencedor();
         }
     });
 });
@@ -48,10 +52,28 @@ function verificarVencedor() {
 }
 
 function trocarJogador() {
-    jogadorAtual = jogadorAtual === 1 ? 2 : 1;
+    jogadorAtual = (jogadorAtual === 1) ? 2 : 1;
+    exibirMensagem(`Jogador ${jogadorAtual}, sua vez!`);
 }
 
 function exibirMensagem(mensagem) {
     const mensagemElement = document.getElementById('mensagem');
     mensagemElement.textContent = mensagem;
+}
+
+botaoReiniciar.addEventListener('click', () => {
+    reiniciarJogo();
+});
+
+function reiniciarJogo() {
+    jogoEmAndamento = true;
+    jogadorAtual = 1;
+    vencedor = null;
+
+    casas.forEach(casa => {
+        casa.textContent = '';
+        casa.classList.remove('jogador1', 'jogador2');
+    });
+
+    exibirMensagem(''); // Limpar a mensagem
 }

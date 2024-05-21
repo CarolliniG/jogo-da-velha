@@ -9,20 +9,33 @@
 <body>
     <h1>Jogo da Velha</h1>
 
-    <div id="jogo">
-        <div class="casa" data-celula="0"></div>
-        <div class="casa" data-celula="1"></div>
-        <div class="casa" data-celula="2"></div>
-        <div class="casa" data-celula="3"></div>
-        <div class="casa" data-celula="4"></div>
-        <div class="casa" data-celula="5"></div>
-        <div class="casa" data-celula="6"></div>
-        <div class="casa" data-celula="7"></div>
-        <div class="casa" data-celula="8"></div>
+    <div id="legenda">
+        <div class="jogador1">Jogador 1: X</div>
+        <div class="jogador2">Jogador 2: O</div>
     </div>
 
     <div id="mensagem"></div>
 
+    <div id="jogo">
+        <div class="linha">
+            <div class="casa" data-celula="0"></div>
+            <div class="casa" data-celula="1"></div>
+            <div class="casa" data-celula="2"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" data-celula="3"></div>
+            <div class="casa" data-celula="4"></div>
+            <div class="casa" data-celula="5"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" data-celula="6"></div>
+            <div class="casa" data-celula="7"></div>
+            <div class="casa" data-celula="8"></div>
+        </div>
+    </div>
+
+    <button id="reiniciar">Reiniciar</button>
+    
     <script src="script.js"></script>
 </body>
 </html>

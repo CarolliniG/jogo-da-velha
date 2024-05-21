@@ -1,8 +1,17 @@
+body{
+    background-color: bisque;
+}
 #jogo {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 300px;
     margin: 0 auto;
+}
+
+.linha {
+    display: flex;
+    width: 100%;
+    margin: 0;
 }
 
 .casa {
@@ -10,14 +19,43 @@
     height: 100px;
     border: 1px solid #ccc;
     text-align: center;
-    font-size: 50px;
+    font-size: 50px; /* Tamanho do símbolo ajustado */
+    line-height: 80px; /* Alinhamento vertical do símbolo */
     cursor: pointer;
 }
 
+
 .jogador1 {
-    background-color: #f00;
+    background-color: rgb(243, 99, 99);
+    color: #fff;
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 0;
 }
 
 .jogador2 {
-    background-color: #00f;
+    background-color: rgb(75, 75, 231);
+    color: #fff;
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+#reiniciar {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 47%;
+}
+
+#mensagem {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#legenda{
+    width: 100px;
 }
