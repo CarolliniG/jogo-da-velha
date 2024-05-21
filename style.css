@@ -1,0 +1,23 @@
+#jogo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.casa {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.jogador1 {
+    background-color: #f00;
+}
+
+.jogador2 {
+    background-color: #00f;
+}
