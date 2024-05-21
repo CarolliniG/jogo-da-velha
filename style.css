@@ -1,61 +1,71 @@
-body{
-    background-color: bisque;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4be;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
+
+h1 {
+    color: #f96153;
+}
+
+#legenda {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.jogador {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.jogador1 {
+    background-color: #f96153;
+    color: #fff;
+}
+
+.jogador2 {
+    background-color: #75a6ea;
+    color: #fff;
+}
+
+#mensagem {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #bf9f88;
+}
+
 #jogo {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin: 0 auto;
+    border: 2px solid #bf9f88;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e8c8a1;
 }
 
 .linha {
     display: flex;
     width: 100%;
-    margin: 0;
 }
 
 .casa {
     width: 100px;
     height: 100px;
-    border: 1px solid #ccc;
-    text-align: center;
-    font-size: 50px; /* Tamanho do símbolo ajustado */
-    line-height: 80px; /* Alinhamento vertical do símbolo */
-    cursor: pointer;
+    border:  1px solid #bf9f88;
 }
 
-
-.jogador1 {
-    background-color: rgb(243, 99, 99);
-    color: #fff;
-    padding: 0;
-    border-radius: 5px;
-    margin-bottom: 0;
-}
-
-.jogador2 {
-    background-color: rgb(75, 75, 231);
-    color: #fff;
-    padding: 0;
-    border-radius: 5px;
-    margin-bottom: 0;
-}
-
-#reiniciar {
+#reiniciar{
+    margin-top: 20px;
+    background-color: #d5d9dd;
+    color: #928787;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin: 30px 47%;
-}
-
-#mensagem {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-#legenda{
-    width: 100px;
 }

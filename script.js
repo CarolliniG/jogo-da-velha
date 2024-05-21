@@ -2,6 +2,7 @@ const casas = document.querySelectorAll('.casa');
 const legendaJogador1 = document.querySelector('.jogador1');
 const legendaJogador2 = document.querySelector('.jogador2');
 const botaoReiniciar = document.getElementById('reiniciar');
+const mensagemElement = document.getElementById('mensagem');
 
 let jogadorAtual = 1; // 1: Jogador 1, 2: Jogador 2
 let jogoEmAndamento = true;
@@ -11,8 +12,10 @@ casas.forEach(casa => {
     casa.addEventListener('click', () => {
         if (jogoEmAndamento && !casa.textContent) {
             marcarCasa(casa, jogadorAtual);
-            trocarJogador();
             verificarVencedor();
+            if (jogoEmAndamento) {
+                trocarJogador();
+            }
         }
     });
 });
@@ -45,7 +48,7 @@ function verificarVencedor() {
         }
     }
 
-    if (!casas.some(casa => !casa.textContent)) {
+    if (![...casas].some(casa => !casa.textContent)) {
         jogoEmAndamento = false;
         exibirMensagem('Empate!');
     }
@@ -57,7 +60,6 @@ function trocarJogador() {
 }
 
 function exibirMensagem(mensagem) {
-    const mensagemElement = document.getElementById('mensagem');
     mensagemElement.textContent = mensagem;
 }
 
@@ -76,4 +78,8 @@ function reiniciarJogo() {
     });
 
     exibirMensagem(''); // Limpar a mensagem
+    exibirMensagem('Jogador 1, sua vez!'); // Mensagem inicial
 }
+
+// Inicializar a mensagem de início do jogo
+exibirMensagem('Jogador 1, sua vez!');
